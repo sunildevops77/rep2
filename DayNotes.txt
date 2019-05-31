@@ -1,0 +1,146 @@
+Jenkins is a self contained, open source automation server which can be used to automate all sorts of tasks related to building , testing and delivering or deployed software.
+
+Jenkins can be installed through native system packages, docker or even run standalone be any machine with a java runtime envirowment (JRE) Installed.
+
+Jenkins is a tool for Implmenting CI-CD (Continuous Integration - Continuous Delivery)
+
+Stages in CI-CD
+
+Stage 1 : Continuous Download
+
+When ever the developer creates any code or makes any changes to the existing code he will push that code into some version controlling systems (Git,Svn etc). Jenkins should immedicately download this code.
+
+Stage 2: Continuous Build
+
+The Code that is downloaded in the previous stage should be build ie it should be converted as an artifact. This artifact can be jar,war,ear,exe etc, This process is called as the build process and jenkins will perform this step with the help of plugins like ant, maven , ms build etc.
+
+Stage 3: Continuous Deployment
+
+The artifact created in the previos step should be deployed into the testing servers. These Tesing servers Might be using application/web servers like tomcat, jboss, weblogic etc. Once the artifact is deployed into the testing servers testers will be able to access it.
+
+Stage 4: Continuous Testing
+
+Jenkins Should now run the automation testing programs (selenium, tosca etc) and test the application that has need deployed in the testing servers. If bugs are encountered jenkins should report to the concerned team members. Developers will fix the bugs and upload the modifed code into the version controlling servers. Jenkins will then reinetaite all the above steps.
+
+Stage 5: Continuous Delivery
+
+If testing passess then jenkins should deploy the artifact in the production servers where the end user can start accessing it. This deployment into the prod servers should be generally done by jenkins after approvals from the delivery manager.
+
+First Four Stages are called Continuous Integration and the fifth stage is called Continuous Delivery.
+
+Steps to install Jenkins on windows
+
+1) Download JDK 1.8 Or Above.
+
+2) Install JDK File.
+
+3) Download Jenkins (Long Term Support) For Windows
+
+4) Install Jenkins
+
+5) To Access Jenkins enter In web browser (http://localhost:8080/)
+
+6) To open Jenkins we need to unlock the jenkins
+
+7) Open the Path to get the password to unlock the jenkins
+
+8) Open the file with the notepad
+
+9) Copy the password & paste the password in browser.
+
+10) Click on Continue.
+
+11) Click on Install Suggested Plugins
+
+12) Create User Name (admin) & password (admin) or if you want to give any other user name and password you can give 
+
+13) Enter your name and email id
+
+Create Sample Job
+
+We have 5 stages in jenkins & all the stages are known as job in jenkins. Any activity you ask to do in jenkins is known as job.
+
+1) Press New Item
+
+2) Enter Item Name as Sample
+
+3) Select Freestyle project & Press Ok
+
+4) Go to Build section 
+
+5) Click on add build step
+
+6) Click on execute windows batch command
+
+7) In Command Box Enter echo " Hello Jenkins"
+
+Echo is just a print statement .
+
+8) Click on apply and save
+
+9) Go to Dashboard 
+
+10) Click on the Build icon on the right side of the job
+
+It will take some time & Refresh the Page
+
+11) Click on the number in last success column .
+
+12) Click on Console Output
+
+13) You will see the Output as Hello Jenkins and Finished : Success
+
+With this we have completed the first example.
+
+For Continuous Download we need to download the Git on windows
+
+1) Download the GIT for windows
+
+2) Install the GIT
+
+3) Go to the path of the GIT in your local machine where you have install GIT in program file. Note down the path of the GIT.exe file.
+
+C:\Program Files\Git\bin\git.exe
+
+4) Go to jenkins Dashboard
+
+5) Click on manage jenkins ( Like a control panel)
+
+6) Click on Global Tool Configuration
+
+7) Go to GIT
+
+8) Enter Any name
+
+9) Enter the path of the GIT File ( C:\Program Files\Git\bin\git.exe )
+
+Download the Code automatically we need to create a new Job
+
+1) Create New Job in Jenkins
+
+2) Enter Item Name as Developement & Select Freestyle project 
+
+3) Select Source Code management tab.
+
+Source code management is your verison control system.
+
+4) Select GIT
+
+5) Create the GITHUB Account
+
+6) Get Some Java Code path from the github website 
+(https://github.com/github/maven-plugins.git)
+
+In real time you get the url from the developer team.
+
+7) Press Apply & Save
+
+8) Back to Dashboard
+
+9) Click on the build icon on the right side of the job
+
+10) Click on the number
+
+11) You will get the path of your system where all the files are download.
+
+This is called Continuous Download.
