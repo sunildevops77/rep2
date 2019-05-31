@@ -1,0 +1,27 @@
+SQL> 
+SQL> 
+SQL> select  text  from  user_source
+  2  where name = 'CAL_SUM';
+
+TEXT                                                                            
+--------------------------------------------------------------------------------
+procedure  cal_sum (  a   in   number,                                          
+				  b   in  number    default  200,                                           
+ 				  c   in   number   default   100)                                         
+is                                                                              
+                                                                                
+d  number;                                                                      
+                                                                                
+begin                                                                           
+                                                                                
+d :=  a+b+c;                                                                    
+                                                                                
+
+TEXT                                                                            
+--------------------------------------------------------------------------------
+dbms_output.put_line ( 'The sum is.....'|| d );                                 
+end;                                                                            
+
+13 rows selected.
+
+SQL> spool  off

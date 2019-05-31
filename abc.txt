@@ -1,0 +1,37 @@
+SQL> 
+SQL> 
+SQL> select * from dept;
+
+    DEPTNO DNAME          LOC                                                   
+---------- -------------- -------------                                         
+        10 ACCOUNTING     NEW YORK                                              
+        20 RESEARCH       DALLAS                                                
+        30 SALES          CHICAGO                                               
+        40 OPERATIONS     BOSTON                                                
+        50 HR             MUMBAI                                                
+        60 ADMIN          HYD                                                   
+        88 abc            hyd                                                   
+        89 abc            hyd                                                   
+
+8 rows selected.
+
+SQL> select * from student;
+
+       SNO SNAME           MARKS                                                
+---------- ---------- ----------                                                
+        10 abc                50                                                
+         1 a                  30                                                
+         5 arun               40                                                
+         6 arun               40                                                
+         7 arun               40                                                
+         8 arun               40                                                
+         9 arun               40                                                
+
+7 rows selected.
+
+SQL> dgfdgfdgd
+SP2-0042: unknown command "dgfdgfdgd" - rest of line ignored.
+SQL> 
+SQL> 
+SQL> 
+SQL> spool  off
